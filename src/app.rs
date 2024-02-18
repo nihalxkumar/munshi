@@ -1,7 +1,13 @@
-// This could contain the main application logic, such as initializing the application, handling user input, and orchestrating interactions between different components of munshi.
-use crate::models::{Bills, get_input};
-use crate::commands::menu::{add_bill, remove_bill, update_bill, view_bills};
-
+// This contains the main application logic, such as initializing the application, handling user input, and orchestrating interactions between different components of munshi.
+use crate::{
+    models::{Bills, get_input},
+    commands::{
+        create::add_bill,
+        read::view_bills,
+        update::update_bill,
+        delete::remove_bill
+    }
+};
 
 #[derive(Debug)]
 pub enum MainMenu{
